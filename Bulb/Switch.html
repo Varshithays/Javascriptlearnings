@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switches</title>
+    <style>
+        body{
+            background-color:white;
+        }
+        #btn{
+            cursor:pointer;
+            height:40px;
+            width:160px;
+            background-color:grey;
+            border-radius:20px;
+            font-size:20px;
+            font-weight:900;
+            font-family:'Courier New',Courier,monospace;
+            border:2px solid blue;
+            transition-duration: .5s;
+        }
+        #btn:hover{
+            transform: scale(1.1);
+        }
+        .center{
+            text-align:center;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            margin:auto;
+            flex-direction:column;
+            padding-top:60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <img src="bulboff.jpg" alt="bulb" id="imgon" width="300" height="400">
+        <button id="btn">Turn on</button>
+
+    </div>
+    <script>
+        let btn=document.getElementById('btn')
+        let img=document.getElementById('imgon')
+        btn.addEventListener('click',change)
+        function change(e){
+            if(btn.textContent.includes('on')){
+                img.src="bulbon.jpg"
+                btn.style.backgroundColor="pink"
+                btn.textContent="Turn off"
+            }else{
+                img.src="bulboff.jpg"
+                btn.textCOntent="Turn on"
+                btn.style.backgroundColor="blue"
+            }
+        }
+    </script>
+</body>
+</html>
